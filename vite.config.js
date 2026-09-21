@@ -5,7 +5,19 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   preview: {
-    allowedHosts: 'all', // Allow any host (Railway, Netlify, etc.)
+    host: '0.0.0.0',
+    allowedHosts: [
+      'site-jenni-production.up.railway.app',
+      '.up.railway.app',
+      '.railway.app'
+    ]
   },
+  server: {
+    host: '0.0.0.0',
+    allowedHosts: [
+      'site-jenni-production.up.railway.app',
+      '.up.railway.app',
+      '.railway.app'
+    ]
+  }
 })
-
